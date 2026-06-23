@@ -65,7 +65,7 @@ if ($null -eq $ocgvVersion) {
     "  $ocgvModule v$v found in PSGallery"
 } 
 
-$ocgvVersion = "$($v.Major).$($v.Minor).$($v.Build).$($v.Revision)"
+$ocgvVersion = $v.ToString()
 "  Installing $ocgvModule v$ocgvVersion to ensure it is loaded."
 Install-Module $ocgvModule -MinimumVersion $ocgvVersion -Force -Verbose:($PSBoundParameters['Verbose'] -eq $true) -SkipPublisherCheck
 
