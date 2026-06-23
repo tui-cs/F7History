@@ -44,19 +44,19 @@ jobs:
             ./build.ps1 -Version ${{ steps.gitversion.outputs.FullSemVer }}
 
     - name: Upload Build Output
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       with:
         name: Modules
         path: ${{github.workspace}}/Output
 
     - name: Upload Tests
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       with:
         name: PesterTests
         path: ${{github.workspace}}/Tests
 
     - name: Upload PSScriptAnalyzerSettings.psd1
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       with:
         name: ScriptAnalyzer
         path: ${{github.workspace}}/PSScriptAnalyzerSettings.psd1
@@ -67,7 +67,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Download Build Output
-      uses: actions/download-artifact@v3
+      uses: actions/download-artifact@v4
     - name: Invoke-ScriptAnalyzer
       uses: devblackops/github-action-psscriptanalyzer@master
       with:
@@ -91,7 +91,7 @@ jobs:
             "$HOME/.dotnet/tools`r`n$(Get-Content -Path $env:GITHUB_PATH)" | Set-Content -Path $env:GITHUB_PATH -Encoding utf8
 
     - name: Download Build Output
-      uses: actions/download-artifact@v3
+      uses: actions/download-artifact@v4
 
     # see https://github.com/Jaykul/RequiredModules/issues/6
     - name: Manually Install Modules F7History is dependent on
@@ -122,9 +122,9 @@ jobs:
         test_results_path: results.xml
 
     - name: Upload Results
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       with:
-        name: Pester Results
+        name: Pester Results-${{ matrix.os }}
         path: ${{github.workspace}}/*.xml
 
   publish:
@@ -135,7 +135,7 @@ jobs:
     steps:
       
       - name: Download Build Output
-        uses: actions/download-artifact@v3
+        uses: actions/download-artifact@v4
 
       # - name: Display structure of downloaded files
       #   run: ls -R
