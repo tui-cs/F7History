@@ -94,16 +94,16 @@ PrivateData = @{
         Tags = 'History','Windows','Mac','Linux','History','ConsoleGuiTools','TUI','Out-ConsoleGridView','ocgv','Terminal.Gui','gui.cs'
 
         # A URL to the license for this module.
-        LicenseUri = 'https://github.com/gui-cs/F7History/blob/main/LICENSE.md'
+        LicenseUri = 'https://github.com/tui-cs/F7History/blob/main/LICENSE.md'
 
         # A URL to the main website for this project.
-        ProjectUri = 'https://github.com/gui-cs/F7History/'
+        ProjectUri = 'https://github.com/tui-cs/F7History/'
 
         # A URL to an icon representing this module.
-        IconUri = 'https://gui-cs.github.io/Terminal.Gui/images/F7HistoryIcon.png'
+        IconUri = 'https://tui-cs.github.io/Terminal.Gui/images/F7HistoryIcon.png'
 
         # ReleaseNotes of this module
-        ReleaseNotes = 'https://github.com/gui-cs/F7History/releases'
+        ReleaseNotes = 'https://github.com/tui-cs/F7History/releases'
 
         # Prerelease string of this module
         # Prerelease = ''
@@ -119,7 +119,7 @@ PrivateData = @{
  } # End of PrivateData hashtable
 
 # HelpInfo URI of this module
-HelpInfoURI = 'https://github.com/gui-cs/F7History'
+HelpInfoURI = 'https://github.com/tui-cs/F7History'
 
 # Default prefix for commands exported from this module. Override the default prefix using Import-Module -Prefix.
 # DefaultCommandPrefix = ''

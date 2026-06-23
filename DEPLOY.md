@@ -66,7 +66,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
 <table>
   <tbody>
     <tr>
-      <td align="center" valign="top" width="14.28%"><a href="http://www.kindel.com"><img src="https://avatars.githubusercontent.com/u/585482?v=4?s=100" width="100px;" alt="Tig"/><br /><sub><b>Tig</b></sub></a><br /><a href="#maintenance-tig" title="Maintenance">🚧</a> <a href="#infra-tig" title="Infrastructure (Hosting, Build-Tools, etc)">🚇</a> <a href="https://github.com/gui-cs/F7History/pulls?q=is%3Apr+reviewed-by%3Atig" title="Reviewed Pull Requests">👀</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="http://www.kindel.com"><img src="https://avatars.githubusercontent.com/u/585482?v=4?s=100" width="100px;" alt="Tig"/><br /><sub><b>Tig</b></sub></a><br /><a href="#maintenance-tig" title="Maintenance">🚧</a> <a href="#infra-tig" title="Infrastructure (Hosting, Build-Tools, etc)">🚇</a> <a href="https://github.com/tui-cs/F7History/pulls?q=is%3Apr+reviewed-by%3Atig" title="Reviewed Pull Requests">👀</a></td>
     </tr>
   </tbody>
 </table>
