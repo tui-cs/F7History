@@ -10,7 +10,7 @@ LONG DESCRIPTION
 EXAMPLES
   
 SEE ALSO
-  - https://github.com/gui-cs
+  - https://github.com/tui-cs
 
 KEYWORDS
       Windows, Mac, Linux, CommandLine, History, ConsoleGuiTools, TUI, Out-ConsoleGridView, ocgv, Terminal.Gui, gui.cs
