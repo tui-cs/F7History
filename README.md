@@ -15,11 +15,27 @@
         <br/>
         <span style="font-size: 1em">A PowerShell module providing a graphical Command History activated by the `F7` and `Shift-F7` keys.</span>
         <br/>
-        <span style="font-size: .8em">Built with <a href="https://github.com/tui-cs/Terminal.Gui">Terminal.Gui</a> and <a href="https://github.com/PowerShell/GraphicalTools">Out-ConsoleGridView</a> by <a href="https://github.com/tig">Tig</a>.</span>
+        <span style="font-size: .8em">Built with <a href="https://github.com/tui-cs/Terminal.Gui">Terminal.Gui</a> and <a href="https://github.com/tui-cs/PSTui">Out-ConsoleGridView</a> by <a href="https://github.com/tig">Tig</a>.</span>
       </td>
     </tr>
   </tbody>
 </table>
+
+> ## ✅ F7History is now built into [PSTui](https://github.com/tui-cs/PSTui)
+>
+> The F7/Shift+F7 graphical command history is **folded into [PSTui](https://github.com/tui-cs/PSTui)**
+> (the continuation of `Microsoft.PowerShell.ConsoleGuiTools`), so you no longer
+> need a separate module:
+>
+> ```powershell
+> Install-Module PSTui
+> Import-Module  PSTui   # registers F7 / Shift+F7 — add to your $PROFILE
+> ```
+>
+> `F7`/`Shift+F7` work exactly as below, and PSTui also gives you
+> `Out-ConsoleGridView` (`ocgv`) and `Show-ObjectTree` (`shot`). You can also call
+> the picker directly as `Show-PSTuiHistory`. This standalone `F7History` module
+> remains available but is **no longer the recommended way** to get F7 history.
 
 ![Demo](https://tui-cs.github.io/F7History/F7History.gif)
 
