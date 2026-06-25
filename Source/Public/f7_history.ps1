@@ -64,24 +64,21 @@ function f7_history {
 
   if ($Diagnostic.IsPresent) { $params["Debug"] = $true }
   if ($UseNetDriver.IsPresent) { $params["UseNetDriver"] = $true }
-  $selection = $history | Out-ConsoleGridView @params
 
   if ($global) {
-    Write-Progress -Activity "Launching `Out-ConsoleGridView" -Completed
+      Write-Progress -Activity "Launching `Out-ConsoleGridView" -Completed
   }
 
-  # Delete the current line and insert the selected line
-  [Microsoft.PowerShell.PSConsoleReadLine]::DeleteLine()
+  $selection = $history | Out-ConsoleGridView @params
+
+  # Tell PSReadLine to re-render the prompt at the current cursor row
+  # (not the original _initialY). Passing CursorTop as the arg parameter
+  # causes InvokePrompt to use that row instead of going back to the old position.
+  [Microsoft.PowerShell.PSConsoleReadLine]::InvokePrompt($null, [Console]::CursorTop)
 
   if ($selection.Count -gt 0) {
     $selection = $selection.'CommandLine'
     [Microsoft.PowerShell.PSConsoleReadLine]::Insert($selection)
-    if ($selection.StartsWith($line)) {
-      [Microsoft.PowerShell.PSConsoleReadLine]::SetCursorPosition($cursor)
-    }
-    else {
-      [Microsoft.PowerShell.PSConsoleReadLine]::SetCursorPosition($selection.Length)
-    }
   }
 }
 
